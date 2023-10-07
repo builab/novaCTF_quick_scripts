@@ -1,0 +1,2 @@
+/STORAGE/kabui/software/novaCTF -Algorithm filterProjections -InputProjections corrected_stack_flipped.ali_#n -OutputFile filtered_stack.ali_#n -TILTFILE #ts.tlt -StackOrientation xz -RADIAL 0.3,0.05
+
