@@ -7,7 +7,6 @@
 # Only serve in case things doesn't work
 
 import sys, os
-from datetime import datetime
 import subprocess
 import multiprocessing
 
@@ -20,7 +19,7 @@ def execute_group(cmd_list):
 	""" Function to execute command as a group """
 	for cmd in cmd_list:
 		print(cmd)
-		#subprocess.call(cmd,shell=True)
+		subprocess.call(cmd,shell=True)
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
