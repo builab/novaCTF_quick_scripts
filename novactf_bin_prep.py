@@ -84,7 +84,7 @@ if __name__ == "__main__":
 	
 	arg_list = []	
 	for tomo in tomo_list:
-		arg_list =  (tomo, bin_factor)
+		arg_list =  arg_list.append((tomo, bin_factor))
 
 	print(arg_list)
 	
