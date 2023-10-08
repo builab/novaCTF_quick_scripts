@@ -78,13 +78,26 @@ if __name__ == "__main__":
 
 	# Use this as a global valuable now
 	bin_factor = int(sys.argv[2])
+	listfile = sys.argv[1]
 
-	with open(sys.argv[1], 'r') as input_list:
+	with open(listfile, 'r') as input_list:
 		tomo_list = [line.strip() for line in input_list.readlines()]
 	
 	arg_list = []	
+	
+	f = open(listfile.replace('.txt', f'_bin{bin_factor}.txt'), 'w')
+	
 	for tomo in tomo_list:
 		arg_list.append((tomo, bin_factor))
+		if not os.path.exists(tomo):
+			print(f"Error: File '{tomo}' not found.")
+			sys.exit(0)
+
+		tspath = os.path.dirname(tomo)
+		tsname, tomoxt = os.path.splitext(os.path.basename(tomo))
+		fwrite(f'{tspath}/{tsname}_bin{bin_factor}.{tomoxt}')
+		
+	f.close()
 
 	print(arg_list)
 	
