@@ -67,10 +67,10 @@ def process_tomo(tomo):
 
 
 def main():
-	if len(sys.argv) < 4:
+	if len(sys.argv) < 3:
 		print_usage()
 		
-	if len(sys.argv) < 3:
+	if len(sys.argv) < 4:
 		no_proc = 1
 	else:
 		no_proc = int(sys.argv[3])
