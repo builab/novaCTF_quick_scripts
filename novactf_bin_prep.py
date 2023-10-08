@@ -87,7 +87,7 @@ if __name__ == "__main__":
 		bin_list.append(bin_factor)
 
 	with multiprocessing.Pool(processes=no_proc) as pool:
-		pool.map(process_tomo, tomo_list, bin_list)
+		pool.map(process_tomo, tomo_list, bin_factor)
 
 
 
