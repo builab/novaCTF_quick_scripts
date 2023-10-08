@@ -61,3 +61,5 @@ if __name__ == "__main__":
 
 	with multiprocessing.Pool(processes=threads) as pool:
 		pool.map(execute_group, cmds)
+
+	print('\nDone !')
