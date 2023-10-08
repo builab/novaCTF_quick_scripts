@@ -2,6 +2,13 @@
 
 This repository contains a set of Python scripts designed to simplify the process of running NovaCTF, a software for correcting CTF artifacts in cryo-EM tilt series data.
 
+## Overview
+- `novactf_bin_prep.py` Prepare files to run NovaCTF with a binned stack.
+- `novactf_paral_auto.py` Run different steps of NovaCTF using a script template for each tomogram individually.
+- `novactf_process_list.py` Using novactf_paral_auto.py to run NovaCTF for many tomograms using a tomogram list
+- `step 1 to 7 .script files` Template for running novaCTF steps. #n = defocus file number & #ts tilt series name.
+
+
 ## Requirements
 
 - Python 3.3
