@@ -36,7 +36,7 @@ def convert_xf(inxf, outxf, bin_factor):
 def process_tomo(tomo):
 	if not os.path.exists(tomo):
 		print(f"Error: File '{tomo}' not found.")
-		continue
+		return -1
 
 	tspath = os.path.dirname(tomo)
 	tsname, tomoxt = os.path.splitext(os.path.basename(tomo))
