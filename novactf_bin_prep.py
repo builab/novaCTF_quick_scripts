@@ -34,7 +34,7 @@ def convert_xf(inxf, outxf, bin_factor):
 				outfile.write('\t'.join(output_columns) + '\n')
 	print(f'Output file {outxf} has been created with modified columns.')
 	
-def process_tomo(tomo, binfactor):
+def process_tomo(tomo, bin_factor):
 	if not os.path.exists(tomo):
 		print(f"Error: File '{tomo}' not found.")
 		return -1
