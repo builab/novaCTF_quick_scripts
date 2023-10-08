@@ -34,7 +34,7 @@ def convert_xf(inxf, outxf, bin_factor):
 				outfile.write('\t'.join(output_columns) + '\n')
 	print(f'Output file {outxf} has been created with modified columns.')
 	
-def process_tomo(tomo):
+def process_tomo(tomo, binfactor):
 	if not os.path.exists(tomo):
 		print(f"Error: File '{tomo}' not found.")
 		return -1
@@ -67,7 +67,7 @@ def process_tomo(tomo):
 	convert_xf(orixf, newxf, bin_factor)
 
 
-def main():
+if __name__ == "__main__":
 	if len(sys.argv) < 3:
 		print_usage()
 		
@@ -76,16 +76,18 @@ def main():
 	else:
 		no_proc = int(sys.argv[3])
 
+	# Use this as a global valuable now
 	bin_factor = int(sys.argv[2])
 
 	with open(sys.argv[1], 'r') as input_list:
 		tomo_list = [line.strip() for line in input_list.readlines()]
+	
+	bin_list = []	
+	for tomo in tomo_list:
+		bin_list.append(bin_factor)
 
 	with multiprocessing.Pool(processes=no_proc) as pool:
-		pool.map(process_tomo, tomo_list)
-
-if __name__ == "__main__":
-	main()
+		pool.map(process_tomo, tomo_list, bin_list)
 
 
 
