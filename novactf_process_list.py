@@ -77,6 +77,10 @@ def main():
 		cmd5 = f'python {script_dir}/novactf_paral_auto.py ../step5_recon.script {tsname} {no_proc}'
 		execute(cmd5)
 		
+		# Clean
+		cmd6 = f'python {script_dir}/novactf_paral_auto.py ../step6_clean.script {tsname} {no_proc}'
+		execute(cmd6)
+		
 		# Done
 		print(f'Done processing {tsname}')
 		

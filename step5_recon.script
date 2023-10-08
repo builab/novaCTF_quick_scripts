@@ -2,4 +2,4 @@
 
 clip rotx #ts_novaCTF_full_rec.mrc #ts_novaCTF_rec.mrc
 
-rm #ts_novaCTF_full_rec.mrc filtered_stack.ali
+rm #ts_novaCTF_full_rec.mrc
