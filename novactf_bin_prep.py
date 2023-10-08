@@ -95,7 +95,7 @@ if __name__ == "__main__":
 
 		tspath = os.path.dirname(tomo)
 		tsname, tomoxt = os.path.splitext(os.path.basename(tomo))
-		fwrite(f'{tspath}/{tsname}_bin{bin_factor}.{tomoxt}\n')
+		f.write(f'{tspath}/{tsname}_bin{bin_factor}.{tomoxt}\n')
 		
 	f.close()
 
