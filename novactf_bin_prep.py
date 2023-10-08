@@ -82,12 +82,14 @@ if __name__ == "__main__":
 	with open(sys.argv[1], 'r') as input_list:
 		tomo_list = [line.strip() for line in input_list.readlines()]
 	
-	bin_list = []	
+	arg_list = []	
 	for tomo in tomo_list:
-		bin_list.append(bin_factor)
+		arg_list =  (tomo, bin_factor)
 
+	print(arg_list)
+	
 	with multiprocessing.Pool(processes=no_proc) as pool:
-		pool.map(process_tomo, tomo_list, bin_list)
+		pool.starmap(process_tomo, arg_list)
 
 
 
