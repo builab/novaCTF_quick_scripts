@@ -40,13 +40,15 @@ if __name__ == "__main__":
 	for i in range(100):
 		if os.path.exists(f'defocus_file.txt_{i}'):
 			no_files = no_files + 1
+	
+	if no_files == 0:
+		no_files = 1
 
 	print(f'Found {no_files} defocus file')
 
 	with open(sys.argv[1], 'r') as f:
 		scripts = [line.strip() for line in f.readlines()]
 
-	print(scripts)
 	cmds = []
 	for id in range(no_files):
 		print(id)
