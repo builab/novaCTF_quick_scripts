@@ -81,7 +81,7 @@ def main():
 	with open(sys.argv[1], 'r') as input_list:
 		tomo_list = [line.strip() for line in input_list.readlines()]
 
-	with Pool(processes=no_proc) as pool:
+	with multiprocessing.Pool(processes=no_proc) as pool:
 		pool.map(process_tomo, tomo_list)
 
 if __name__ == "__main__":
