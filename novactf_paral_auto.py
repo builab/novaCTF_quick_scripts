@@ -25,9 +25,13 @@ def execute_group(cmd_list):
         subprocess.call(cmd, shell=True) 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
+    if len(sys.argv) < 3:
         print_usage()
 
+	if not os.path.exists('defocus_file.txt'):
+		print(f"Error: File defocus_file.txt not found. The ctffind4 defocus file must be named defocus_file.txt.")
+		sys.exit(0)
+		
     ts_name = sys.argv[2]
     threads = int(sys.argv[3])
 
