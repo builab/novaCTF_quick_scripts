@@ -1,1 +1,2 @@
 newstack -input corrected_stack.st_#n -output corrected_stack.ali_#n -xform #ts.xf -BinByFactor 1 -ImagesAreBinned 1 -SizeToOutputInXandY 2048,2048 -TaperAtFill 1,0 -OffsetsInXandY 0,0
+clip flipyz corrected_stack.ali_#n corrected_stack_flipped.ali_#n

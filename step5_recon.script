@@ -1,1 +1,5 @@
-/STORAGE/kabui/software/novaCTF -Algorithm 3dctf -InputProjections filtered_stack.ali -OutputFile #ts_novaCTF_rec.mrc -TILTFILE #ts.tlt -THICKNESS 1500 -FULLIMAGE 2048,2048 -SHIFT 0.0,0.0 -PixelSize 0.2446 -DefocusStep 15 -Use3DCTF 1
+/STORAGE/kabui/software/novaCTF -Algorithm 3dctf -InputProjections filtered_stack.ali -OutputFile #ts_novaCTF_full_rec.mrc -TILTFILE #ts.tlt -THICKNESS 1500 -FULLIMAGE 2048,2048 -SHIFT 0.0,0.0 -PixelSize 0.2446 -DefocusStep 15 -Use3DCTF 1
+
+clip rotx #ts_novaCTF_full_rec.mrc #ts_novaCTF_rec.mrc
+
+rm #ts_novaCTF_full_rec.mrc filtered_stack.ali
