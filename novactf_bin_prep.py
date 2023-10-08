@@ -10,7 +10,7 @@
 import sys
 import os
 import shutil
-import multiprocessing
+import subprocess, multiprocessing
 
 def print_usage():
 	print("python novactf_bin_prep.py tomolist binfactor no_proc")
