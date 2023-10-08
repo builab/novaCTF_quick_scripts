@@ -46,8 +46,10 @@ if __name__ == "__main__":
 	with open(sys.argv[1], 'r') as f:
 		scripts = [line.strip() for line in f.readlines()]
 
+	print(scripts)
 	cmds = []
 	for id in range(no_files):
+		print(id)
 		cmd_list = []
 		# Go through all command
 		for script in scripts:
