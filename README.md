@@ -56,6 +56,7 @@ Output: bin2 stack file, bin2 xf, .tlt, and .txtilt files, and tomolist list fil
 ### 2. Running Individual Steps for NovaCTF
 
 Edit the `.script` files in the main project folder with the appropriate parameters. Then, navigate to the tomogram folder (e.g., `TS_001`) and run each step sequentially:
+NOTE: Step5 does not deal with xaxistilt right now
 
 - Step 1: Generating defocus file
   ```bash
