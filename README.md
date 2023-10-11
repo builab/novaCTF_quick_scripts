@@ -89,14 +89,14 @@ NOTE: Step5 does not deal with xaxistilt right now
   python novactf_paral_auto.py ../step6_clean.script TS_001 1
   ```
 
-- Step 7: Binning (if necessary)
+- Step 7: Binning to bin 2 and bin 4 using Fourier3D
   ```bash
   python novactf_paral_auto.py ../step7_bin.script TS_001 1
   ```
 
-### 3. Running for All Tomograms Simultaneously (Except for Binning Step)
+### 3. Running for All Tomograms Simultaneously
 
-This script will iterate through each tomogram and perform NovaCTF correction using `novactf_paral_auto.py` from steps 1 to 6.
+This script will iterate through each tomogram and perform NovaCTF correction using `novactf_paral_auto.py` from steps 1 to 7.
 
 Note: Choose the binned tomolist if you want to perform CTF correction on a binned volume.
 
