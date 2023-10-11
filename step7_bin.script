@@ -1,1 +1,3 @@
-binvol
+/STORAGE/kabui/software/Fourier3D/Fourier3D -BinFactor 2 -InputFile #ts_novaCTF_rec.mrc -OutputFile  #ts_bin2_novaCTF_rec.mrc -MemoryLimit 8000
+
+/STORAGE/kabui/software/Fourier3D/Fourier3D -BinFactor 4 -InputFile #ts_novaCTF_rec.mrc -OutputFile  #ts_bin4_novaCTF_rec.mrc -MemoryLimit 8000
